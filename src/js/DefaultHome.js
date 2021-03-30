@@ -5,8 +5,8 @@ const defaultHome = () => {
   let month = today.month() + 1;
   let year = today.year();
   let day = today.date();
-  let nextYear = `${year + 1}-${month}-${day}`
-  let now = `${year}-${month}-${day}`;
+  let nextYear = `${year + 1}-0${month}-${day}`
+  let now = `${year}-0${month}-${day}`;
   
   return `?dates=${now},${nextYear}&ordering=-added`;
 };
