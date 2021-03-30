@@ -8,7 +8,7 @@ const defaultHome = () => {
   let nextYear = `${year + 1}-0${month}-${day}`
   let now = `${year}-0${month}-${day}`;
   
-  return `?dates=${now},${nextYear}&ordering=-added`;
+  return `&dates=${now},${nextYear}&ordering=-added`;
 };
 
 const formatDate = date => {
