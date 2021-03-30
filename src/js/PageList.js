@@ -125,7 +125,7 @@ const PageList = (argument = "") => {
     
     let dates = defaultHome();
 
-    fetchList(`https://api.rawg.io/api/games${dates}&page_size=27`, cleanedArgument);
+    fetchList(`https://api.rawg.io/api/games?key=1a9dc657af734f4e810c4a806ecc5624${dates}&page_size=27`, cleanedArgument);
     if (window.onload) {
       const reloadLink = document.getElementById('reload');
       reloadLink.onclick = PageList(`${dates}&page_size=27`)
