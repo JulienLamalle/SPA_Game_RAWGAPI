@@ -130,6 +130,8 @@ const PageList = (argument = "") => {
       const reloadLink = document.getElementById('reload');
       reloadLink.onclick = PageList(`${dates}&page_size=27`)
     }
+
+    console.log(`${dates}`)
   };
 
   const render = () => {
