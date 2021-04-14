@@ -1,6 +1,6 @@
 import {header, footer} from './components';
 import {platformsIcons} from './IconsArray'; 
-import {defaultHome, formatDate} from './DefaultHome';
+import {buildDateString, formatDate} from './DefaultHome';
 import {searcher} from './searcher';
 import {showInfo, hideInfo} from './DisplayGameInfo';
 import {addCreators, seePlatform} from './GetStudio'
@@ -123,15 +123,13 @@ const PageList = (argument = "") => {
         });
     };
     
-    let dates = defaultHome();
+    let dates = buildDateString();
 
     fetchList(`https://api.rawg.io/api/games?key=1a9dc657af734f4e810c4a806ecc5624${dates}&page_size=27`, cleanedArgument);
     if (window.onload) {
       const reloadLink = document.getElementById('reload');
       reloadLink.onclick = PageList(`${dates}&page_size=27`)
     }
-
-    console.log(`${dates}`)
   };
 
   const render = () => {
